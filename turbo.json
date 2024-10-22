@@ -1,0 +1,38 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "baseBranch": "origin/main",
+  "pipeline": {
+    "build:test": {
+      "dependsOn": [
+        "^build:test"
+      ],
+      "outputs": [
+        "dist/**"
+      ],
+      "inputs": [
+        "src/**/*.css",
+        "src/**/*.scss",
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "src/*.ts",
+        "index.html"
+      ]
+    },
+    "build:prod": {
+      "dependsOn": [
+        "^build:prod"
+      ],
+      "outputs": [
+        "dist/**"
+      ],
+      "inputs": [
+        "src/**/*.css",
+        "src/**/*.scss",
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "src/*.ts",
+        "index.html"
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "monorepo-turborepo-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build:client": "turbo run build:test --filter client",
+    "build:admin": "turbo run build:test --filter admin"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "turbo": "^2.2.3"
+  }
+}
